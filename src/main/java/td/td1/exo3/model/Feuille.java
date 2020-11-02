@@ -2,7 +2,7 @@ package td.td1.exo3.model;
 
 import java.util.Set;
 
-public class Feuille<T> implements Arbre<T> {
+public class Feuille<T extends Sommable<T>> implements Arbre<T> {
 
 	private final T valeur;
 	
@@ -23,6 +23,11 @@ public class Feuille<T> implements Arbre<T> {
 	@Override
 	public Set<T> valeurs() {
 		return Set.of(this.valeur);
-	} 
+	}
+
+	@Override
+	public T somme() {
+		return this.valeur;
+	}
 
 }

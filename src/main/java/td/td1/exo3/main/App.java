@@ -3,12 +3,20 @@
  */
 package td.td1.exo3.main;
 
-public class App {
-    public String getGreeting() {
-        return "Hello world.";
-    }
+import td.td1.exo3.model.Arbre;
+import td.td1.exo3.model.Entier;
+import td.td1.exo3.model.Feuille;
 
+public class App {
     public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
+        Arbre<Entier> a1 = new Feuille<>(1);
+        Arbre<Entier> a2 = new Feuille<>(2);
+        Arbre<Entier> a3 = new Feuille<>(3);
+
+        Arbre<Entier> a4 = new Feuille<>("1");
+        Arbre<Entier> a5 = new Feuille<>("2");
+        Arbre<Entier> a6 = new Feuille<>("3");
+
+
     }
 }
