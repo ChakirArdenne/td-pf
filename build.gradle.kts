@@ -30,7 +30,7 @@ dependencies {
 
 application {
     // Define the main class for the application.
-    mainClassName = "td.App"
+    mainClassName = "td.td1.exo2.main.Main" 
 }
 
 val test by tasks.getting(Test::class) {

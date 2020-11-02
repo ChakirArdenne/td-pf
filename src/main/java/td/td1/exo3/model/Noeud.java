@@ -78,6 +78,10 @@ public class Noeud implements Arbre {
 
 	@Override
 	public boolean estTrie() {
+		return conditionTrie1() && conditionTrie2();
+	}
+
+	private boolean conditionTrie1(){
 		for (Arbre arbre : fils) {
 			if(arbre.estTrie()) {
 				return true;
@@ -85,4 +89,15 @@ public class Noeud implements Arbre {
 		}
 		return false;
 	}
+
+	private boolean conditionTrie2() {
+        boolean rtr = true;
+        for (int i = 0; i < fils.size() - 1; i++) {
+            final Arbre fi = fils.get(i);
+            final Arbre fj = fils.get(i+1);
+                if (fi.max() > fj.min())
+                    return false;
+        }
+        return rtr;
+    }
 }
