@@ -2,11 +2,11 @@ package td.td1.exo3.model;
 
 import java.util.Set;
 
-public class Feuille implements Arbre {
+public class Feuille<T> implements Arbre<T> {
 
-	private final int valeur;
+	private final T valeur;
 	
-	public Feuille(final int valeur) {
+	public Feuille(final T valeur) {
 		this.valeur = valeur;
 	}
 
@@ -16,33 +16,13 @@ public class Feuille implements Arbre {
 	}
 
 	@Override
-	public boolean contient(Integer val) {
+	public boolean contient(T val) {
 		return this.valeur == val;
 	}
 
 	@Override
-	public Set<Integer> valeurs() {
+	public Set<T> valeurs() {
 		return Set.of(this.valeur);
 	} 
-
-	@Override
-	public Integer somme() {
-		return this.valeur;
-	}
-
-	@Override
-	public Integer min() {
-		return this.valeur;
-	}
-
-	@Override
-	public Integer max() {
-		return this.valeur;
-	}
-
-	@Override
-	public boolean estTrie() {
-		return true;
-	}
 
 }

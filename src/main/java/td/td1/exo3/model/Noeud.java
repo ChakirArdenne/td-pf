@@ -4,7 +4,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-public class Noeud implements Arbre {
+public class Noeud<T> implements Arbre<T> {
 
 	private final List<Arbre> fils;
 
