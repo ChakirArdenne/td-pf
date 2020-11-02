@@ -2,7 +2,7 @@ package td.td1.exo3.model;
 
 import java.util.Set;
 
-public class Feuille<T extends Sommable<T>> implements Arbre<T> {
+public class Feuille<T extends Sommable<T> & Comparable<T>> implements Arbre<T> {
 
 	private final T valeur;
 	
@@ -28,6 +28,21 @@ public class Feuille<T extends Sommable<T>> implements Arbre<T> {
 	@Override
 	public T somme() {
 		return this.valeur;
+	}
+
+	@Override
+	public T min() {
+		return valeur;
+	}
+
+	@Override
+	public T max() {
+		return valeur;
+	}
+
+	@Override
+	public boolean estTrie() {
+		return true;
 	}
 
 }

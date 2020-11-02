@@ -33,4 +33,5 @@ public class Chaine implements Sommable<Chaine> {
     public Chaine zero() {
         return new Chaine("");
     }
+
 }
