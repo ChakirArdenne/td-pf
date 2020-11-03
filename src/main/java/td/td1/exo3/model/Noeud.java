@@ -61,7 +61,6 @@ public class Noeud<T extends Sommable<T> & Comparable<T>> implements Arbre<T> {
 		for (int i = 0; i < fils.size() ; i++) {
 
 		}
-
 		return rtr;
 	}
 
